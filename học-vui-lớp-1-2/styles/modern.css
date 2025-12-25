@@ -1,0 +1,102 @@
+
+/* Modern Academic UI Styles - Premium Colored App Cards */
+:root {
+  --primary: #2563eb;
+  --bg-main: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  
+  /* Multi-layered Soft Shadows for Colored Cards */
+  --premium-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  --premium-hover-shadow: 
+    0 35px 60px -15px rgba(0, 0, 0, 0.2);
+}
+
+.modern-card {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 3rem; 
+  box-shadow: var(--premium-shadow);
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modern-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--premium-hover-shadow);
+}
+
+/* Glassmorphism Icon Container */
+.icon-container-colored {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.modern-card:hover .icon-container-colored {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Premium Bright Action Button */
+.btn-premium-action {
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.1rem 1.5rem;
+}
+
+.btn-premium-action:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2);
+  background: #fdfdfd;
+}
+
+.btn-premium-action:active {
+  transform: translateY(-1px);
+}
+
+/* Circle for arrow inside button */
+.btn-icon-circle {
+  background: #f1f5f9;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-premium-action:hover .btn-icon-circle {
+  background: #2563eb;
+  color: white;
+  transform: translateX(4px);
+}
+
+/* Smooth Scroll behavior for HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  -webkit-font-smoothing: antialiased;
+}

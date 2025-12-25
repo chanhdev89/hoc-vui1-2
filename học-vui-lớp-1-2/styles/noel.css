@@ -1,0 +1,68 @@
+
+/* Noel Night Theme - Balanced & Professional */
+:root {
+  --noel-bg: #0f172a; /* Xanh đêm sâu, dịu mắt hơn */
+  --noel-pine: #064e3b;
+  --card-bg: #f9fafb; /* Trắng kem tinh tế */
+  --noel-gold-soft: #fbbf24;
+}
+
+/* Snowflake Animation - Thinner & Slower */
+@keyframes snowfall {
+  0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+  20% { opacity: 0.4; }
+  80% { opacity: 0.4; }
+  100% { transform: translateY(100vh) translateX(30px); opacity: 0; }
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: snowfall linear infinite;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--noel-bg);
+  color: #f1f5f9;
+}
+
+.bg-hero-noel {
+  background: linear-gradient(180deg, #0f172a 0%, #064e3b 100%);
+}
+
+/* Card Subject Styles */
+.subject-card-base {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subject-card-base:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button & Icon Helpers */
+.noel-btn-shadow {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.noel-btn-shadow:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
